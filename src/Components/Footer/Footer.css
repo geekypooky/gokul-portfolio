@@ -1,0 +1,45 @@
+.footer-minimal {
+  padding: 2.5rem 5vw;
+  text-align: center;
+  background: #0d0d0d;
+  color: #ccc;
+  font-family: 'Helvetica Neue', sans-serif;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+}
+
+.footer-quote {
+  font-size: 1rem;
+  font-style: italic;
+  color: #aaa;
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+.footer-quote:hover {
+  color: #fff;
+}
+
+.quote-author {
+  display: block;
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+  color: #777;
+}
+
+.footer-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  font-size: 0.85rem;
+  color: #888;
+  opacity: 0.9;
+}
+
+.footer-tagline {
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  color: #aaa;
+}

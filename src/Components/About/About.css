@@ -1,0 +1,163 @@
+.about {
+  padding: 6rem 8vw;
+  background: #0d0d0d;
+  color: #fff;
+  font-family: 'Helvetica Neue', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.section-title {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
+  border-left: 4px solid #fff;
+  padding-left: 1rem;
+}
+
+.about-card {
+  background: rgba(255, 255, 255, 0.025);
+  padding: 2rem 3rem;
+  border-radius: 20px;
+  border: 1.2px solid rgba(255, 255, 255, 0.12);
+  box-shadow:
+    0 0 0 0.5px rgba(255, 255, 255, 0.1),
+    0 6px 18px rgba(255, 255, 255, 0.08),
+    inset 0 0 4px rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(12px);
+  position: relative;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+
+.about-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 
+    0 12px 36px rgba(255, 255, 255, 0.12),
+    inset 0 0 6px rgba(255, 255, 255, 0.06);
+}
+
+.about-card h4 {
+  font-size: 1.5rem;
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+}
+
+.about-card p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.about-year {
+  display: block;
+  margin-top: 0.6rem;
+  font-size: 0.9rem;
+  color: #777;
+  font-style: italic;
+  letter-spacing: 0.03em;
+}
+
+.skills-intro {
+  font-size: 1.05rem;
+  color: #bcbcbc;
+  max-width: 700px;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+
+.skill-carousel {
+  display: flex;
+  gap: 1.25rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  scrollbar-width: none;
+}
+
+.skill-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.skill-tile {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  color: #e8e8e8;
+  padding: 1rem 1rem;
+  border-radius: 14px;
+  font-size: 0.95rem;
+  font-weight: 300;
+  min-width: 210px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 0 transparent;
+  position: relative;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.skill-tile:hover {
+  transform: scale(1.035);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 12px 28px rgba(16, 15, 15, 0.06);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .about-card {
+    padding: 1.5rem 2rem;
+  }
+
+  .skill-tile {
+    min-width: 160px;
+    font-size: 0.85rem;
+  }
+
+  .skills-intro {
+    font-size: 1rem;
+  }
+}
+.scroll-hint {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  animation: fadeIn 1s ease forwards;
+}
+
+.scroll-icon {
+  font-size: 0.95rem;
+  color: #aaa;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  position: relative;
+  animation: pulse 2s infinite ease-in-out;
+  user-select: none;
+  pointer-events: none;
+}
+
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.6; transform: translateY(0); }
+  50% { opacity: 1; transform: translateY(-2px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+

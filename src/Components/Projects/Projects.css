@@ -1,0 +1,90 @@
+.projects {
+  padding: 5rem 6vw;
+  background: #0a0a0a;
+  color: #fff;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.section-title {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+  padding-left: 1rem;
+  border-left: 4px solid #fff;
+}
+
+.carousel-container {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  padding-bottom: 1rem;
+  perspective: 1000px;
+}
+
+.carousel-container::-webkit-scrollbar {
+  display: none;
+}
+
+.dock-card {
+  scroll-snap-align: center;
+  flex: 0 0 260px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  border-radius: 16px;
+  padding: 1.8rem 1.2rem;
+  transition: all 0.35s ease;
+  transform-origin: center bottom;
+  text-align: left;
+  backdrop-filter: blur(14px);
+  cursor: pointer;
+  transform: scale(0.95);
+  position: relative;
+  box-shadow: 
+    0 0 0 0.5px rgba(255, 255, 255, 0.25),
+    inset 0 0 4px rgba(255, 255, 255, 0.05),
+    0 6px 20px rgba(255, 255, 255, 0.06);
+}
+
+
+.dock-card.active {
+  transform: scale(1.15) translateY(-10px);
+  z-index: 2;
+  box-shadow: 0 15px 30px rgba(236, 228, 228, 0.1);
+}
+
+.dock-card h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.7rem;
+}
+
+.dock-card p {
+  font-size: 0.95rem;
+  color: #aaa;
+  height: 3.2em;
+  overflow: hidden;
+  margin-bottom: 1.1rem;
+}
+
+.dock-card a {
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.dock-card:hover {
+  border-color: rgba(255, 255, 255, 0.45); 
+  box-shadow: 
+    0 8px 24px rgba(255, 255, 255, 0.12),
+    0 12px 30px rgba(255, 255, 255, 0.15),
+    inset 0 0 6px rgba(255, 255, 255, 0.12);
+}
+
+@media (max-width: 768px) {
+  .dock-card {
+    flex: 0 0 220px;
+  }
+}
