@@ -12,8 +12,7 @@ function Hero() {
       VanillaTilt.init(tiltRef.current, {
         max: 25,
         speed: 400,
-        glare: true,
-        'max-glare': 0.3,
+        glare: false, // Disabled glare to keep original image colors
         scale: 1.05,
       });
     }
